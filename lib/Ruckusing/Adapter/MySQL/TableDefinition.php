@@ -21,6 +21,7 @@
  */
 class Ruckusing_Adapter_MySQL_TableDefinition
 {
+
     /**
      * adapter MySQL
      *
@@ -66,7 +67,7 @@ class Ruckusing_Adapter_MySQL_TableDefinition
     /**
      * Table definition
      *
-     * @var array
+     * @var mixed
      */
     private $_table_def;
 

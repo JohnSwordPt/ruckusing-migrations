@@ -11,6 +11,8 @@
 
 define('RUCKUSING_TASK_DIR', RUCKUSING_BASE . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'Task');
 
+#[\AllowDynamicProperties]
+
 /**
  * Ruckusing_Task_Manager
  *
@@ -21,7 +23,8 @@ define('RUCKUSING_TASK_DIR', RUCKUSING_BASE . DIRECTORY_SEPARATOR . 'lib' . DIRE
  */
 class Ruckusing_Task_Manager
 {
-    private $_config;
+    public $_config;
+
     /**
      * adapter
      *

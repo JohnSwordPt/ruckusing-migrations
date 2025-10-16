@@ -24,6 +24,8 @@ define('MYSQL_MAX_IDENTIFIER_LENGTH', 64);
  */
 class Ruckusing_Adapter_MySQL_Base extends Ruckusing_Adapter_Base implements Ruckusing_Adapter_Interface
 {
+    public $db_info;
+    
     /**
      * Name of adapter
      *
@@ -1305,9 +1307,10 @@ class Ruckusing_Adapter_MySQL_Base extends Ruckusing_Adapter_Base implements Ruc
 
             return true;
         } else {
+            $dsn_str = is_array($dsn) ? implode(' ', $dsn) : (string) $dsn;
             throw new Ruckusing_Exception(
-                    "\n\nCould not extract DB connection information from: " . implode(' ', $dsn) . "\n\n",
-                    Ruckusing_Exception::INVALID_CONFIG
+                "\n\nCould not extract DB connection information from: " . $dsn_str . "\n\n",
+                Ruckusing_Exception::INVALID_CONFIG
             );
         }
     }

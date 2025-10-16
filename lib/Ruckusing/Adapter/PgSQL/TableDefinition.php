@@ -66,7 +66,7 @@ class Ruckusing_Adapter_PgSQL_TableDefinition extends Ruckusing_Adapter_TableDef
     /**
      * Table definition
      *
-     * @var array
+     * @var mixed
      */
     private $_table_def;
 

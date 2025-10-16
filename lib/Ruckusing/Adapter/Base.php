@@ -31,6 +31,9 @@ define('SQL_SET', 1024);
  */
 class Ruckusing_Adapter_Base
 {
+    protected $db_info;
+    protected $conn;
+
     /**
      * dsn
      *
@@ -161,4 +164,40 @@ class Ruckusing_Adapter_Base
         }
         return RUCKUSING_TS_SCHEMA_TBL_NAME;
     }
+
+    /**
+     * override to Create the schema table, if necessary
+     */
+    public function create_schema_version_table(){}
+
+    /**
+     * Select one
+     *
+     * @param string $query query to run
+     *
+     * @throws Ruckusing_Exception
+     * @return array
+     */
+    public function select_one($query){}
+
+    /**
+     * override to Check if a table exists
+     *
+     * @param string  $tbl           the table name
+     * @param boolean $reload_tables reload table or not
+     *
+     * @return boolean
+     */
+    public function table_exists($tbl, $reload_tables = false) {}
+
+    /**
+     * Execute a query
+     *
+     * @param string $query query to run
+     *
+     * @throws Ruckusing_Exception
+     * @return boolean
+     */
+    public function query($query) {}
+
 }

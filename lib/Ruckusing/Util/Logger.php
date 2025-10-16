@@ -73,7 +73,7 @@ class Ruckusing_Util_Logger
     public static function instance($logfile)
     {
         if (self::$_instance !== NULL) {
-            return $instance;
+            return self::$_instance;
         }
         $instance = new Ruckusing_Util_Logger($logfile);
 

@@ -32,7 +32,7 @@ class Ruckusing_Adapter_Sqlite3_Base extends Ruckusing_Adapter_Base implements R
     /**
      * @var
      */
-    private $db_info;
+    protected $db_info;
     /**
      * @var bool
      */
