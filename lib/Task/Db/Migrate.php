@@ -199,7 +199,7 @@ class Task_Db_Migrate extends Ruckusing_Task_Base implements Ruckusing_Task_Inte
      * Prepare to do a migration
      *
      * @param string $destination version to migrate to
-     * @param $string $direction direction to migrate to 'up'/'down'
+     * @param string $direction direction to migrate to 'up'/'down'
      */
     private function prepare_to_migrate($destination, $direction)
     {

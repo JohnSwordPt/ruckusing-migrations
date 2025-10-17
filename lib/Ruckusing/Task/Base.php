@@ -18,7 +18,7 @@
  * @link      https://github.com/ruckus/ruckusing-migrations
  */
 class Ruckusing_Task_Base
-{
+{   
     /**
      * the framework
      *
